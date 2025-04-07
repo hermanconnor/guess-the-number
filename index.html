@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/script.js"></script>
-  <title>Guess The Number</title>
-</head>
-<body>
-  <main></main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+    <title>Guess The Number</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="game-card">
+        <header>
+          <h1>🎮 Guess The Number 🎲</h1>
+        </header>
+
+        <!-- GAME SETTINGS SECTION -->
+        <section>
+          <div class="range-settings">
+            <label for="max-number">Maximum number:</label>
+            <div class="input-with-button">
+              <input
+                type="number"
+                id="max-number"
+                min="2"
+                value="10"
+                aria-describedby="max-number-description"
+              />
+
+              <button
+                id="set-max"
+                class="btn btn-secondary"
+                aria-label="Set maximum number"
+              >
+                Set
+              </button>
+            </div>
+            <small id="max-number-description"
+              >Set the maximum number for the game.</small
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
