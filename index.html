@@ -49,12 +49,54 @@
         </section>
 
         <!-- GAME INFO SECTION -->
-         <section class="game-info">
+        <section class="game-info">
           <p id="game-message">
             🤔 I'm thinking of a number between 1 and
             <span id="current-max">10</span>. Can you guess it?
           </p>
-         </section>
+        </section>
+
+        <!-- GUESS INPUT SECTION -->
+        <section class="guess-input">
+          <!-- <label for="guess">Enter your guess:</label> -->
+          <input
+            type="number"
+            id="guess"
+            min="1"
+            placeholder="Enter your guess"
+            aria-placeholder="Enter your guess"
+          />
+          <button
+            id="submit-guess"
+            class="btn btn-primary"
+            aria-label="Submit your guess"
+          >
+            <span class="btn-text">Guess</span>
+            <span class="btn-icon">🔍</span>
+          </button>
+        </section>
+
+        <!-- GUESS HISTORY SECTION -->
+        <section class="game-history">
+          <h2>Previous Guesses</h2>
+          <ul id="guesses-list"></ul>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="game-stats">
+          <p>Attempts: <span id="attempts">0</span></p>
+        </section>
+
+        <footer>
+          <button
+            id="new-game"
+            class="btn btn-outline"
+            aria-label="Start a new game"
+          >
+            <span class="btn-text">New Game</span>
+            <span class="btn-icon">🔄</span>
+          </button>
+        </footer>
       </div>
     </main>
   </body>
