@@ -162,6 +162,42 @@ input:focus {
   color: var(--text-light);
 }
 
+#guesses-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#guesses-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.too-low {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.too-high {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.correct {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
 #new-game {
   width: 100%;
 }
@@ -174,5 +210,20 @@ input:focus {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .game-card {
+    padding: 1.5rem;
+  }
+
+  .input-with-button,
+  .guess-input {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
