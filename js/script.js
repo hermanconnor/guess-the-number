@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
       initGame();
     } else {
       maxNumberInput.value = maxNumber;
-      gameMessage.textContent = 'Maximum number must be at least 2.';
+      maxNumberInput.classList.add('shake');
+      setTimeout(() => maxNumberInput.classList.remove('shake'), 500);
+      gameMessage.textContent = '⚠️ Maximum number must be at least 2.';
     }
   }
 
