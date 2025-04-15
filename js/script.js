@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gameOver = false;
 
     currentMaxSpan.textContent = maxNumber;
-    gameMessage.textContent = `I'm thinking of a number between 1 and ${maxNumber}. Can you guess it?`;
+    gameMessage.textContent = `🤔 I'm thinking of a number between 1 and ${maxNumber}. Can you guess it?`;
     attemptsSpan.textContent = attempts;
     guessesList.innerHTML = '';
     guessInput.value = '';
@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       guessItem.classList.add('too-high');
       gameMessage.textContent = 'Too high! Try a lower number.';
     } else {
+      guessItem.innerHTML = `${guess} <span>🎉</span>`;
       guessItem.classList.add('correct');
       gameMessage.textContent = `🎉 Congratulations! You guessed the number in ${attempts} attempts! 🎉`;
       gameOver = true;
